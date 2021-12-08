@@ -276,4 +276,12 @@ interface Collection extends Countable, IteratorAggregate, ArrayAccess
 	 * @return array<TKey,T>
 	 */
 	public function slice($offset, $length = null);
+
+	/**
+	 * Selects all elements from a selectable that match the expression and
+	 * returns a new collection containing these elements.
+	 *
+	 * @return Collection<TKey,T>
+	 */
+	public function matching(Criteria $criteria);
 }
